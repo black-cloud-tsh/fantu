@@ -1,1 +1,4 @@
-/* pages/huahua/huahua.wxss */
+.imgList{
+  height: 150rpx;
+  width: 150rpx;
+ }

@@ -5,8 +5,36 @@ Page({
    * 页面的初始数据
    */
   data: {
+    msg: [
+     { 'show1': true },
+     { 'show': false },
+     { 'show': false },
+     { 'show': false },
+     { 'show': false },
+     { 'show': false },
+     { 'show': false },
+     { 'show': false },
+    ]
+   },
+   zan: function (e) {
+    const vm = this;
+   
+    const _index = e.currentTarget.dataset.index;
+   
+    let _msg = [...vm.data.msg]; // msg的引用
+   
+    _msg[_index]['show'] = !vm.data.msg[_index]['show'];
+   
+   
+    vm.setData({
+     msg: _msg
+   
+    })
+   
+   },
+ 
 
-  },
+ 
 
   /**
    * 生命周期函数--监听页面加载
